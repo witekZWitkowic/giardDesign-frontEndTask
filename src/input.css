@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navBar__li-animation {
+    display: inline-block;
+    position: relative;
+}
+.navBar__li-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.38s ease-out;
+}
+.navBar__li-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
