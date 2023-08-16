@@ -178,3 +178,16 @@ p, span{
     background-color: var(--beige);
     border: 1px solid var(--secondary)
   }
+
+  .hero__slider-slide {
+    object-fit: fill;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 250ms opacity ease-in-out;
+    transition-delay: 250ms;
+  }
+  .hero__slider-slide[data-active]{
+    opacity: 1;
+    transition-delay: 0ms;
+  }

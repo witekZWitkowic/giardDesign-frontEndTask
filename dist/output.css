@@ -1,3 +1,5 @@
+@config "../tailwind.config.js";
+
 /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
@@ -434,7 +436,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -484,7 +486,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -534,160 +536,189 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.relative {
+.absolute{
+  position: absolute;
+}
+
+.relative{
   position: relative;
 }
 
-.z-10 {
+.bottom-0{
+  bottom: 0px;
+}
+
+.right-0{
+  right: 0px;
+}
+
+.z-10{
   z-index: 10;
 }
 
-.z-50 {
+.z-50{
   z-index: 50;
 }
 
-.mx-\[20px\] {
+.mx-\[20px\]{
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.ml-\[89px\] {
+.ml-\[89px\]{
   margin-left: 89px;
 }
 
-.mr-12 {
+.mr-12{
   margin-right: 3rem;
 }
 
-.mt-\[144px\] {
+.mt-\[144px\]{
   margin-top: 144px;
 }
 
-.mt-\[44px\] {
+.mt-\[44px\]{
   margin-top: 44px;
 }
 
-.mt-\[72px\] {
+.mt-\[72px\]{
   margin-top: 72px;
 }
 
-.block {
+.block{
   display: block;
 }
 
-.flex {
+.flex{
   display: flex;
 }
 
-.hidden {
+.hidden{
   display: none;
 }
 
-.h-\[50px\] {
+.h-\[50px\]{
   height: 50px;
 }
 
-.h-\[72px\] {
+.h-\[72px\]{
   height: 72px;
 }
 
-.h-\[737px\] {
+.h-\[737px\]{
   height: 737px;
 }
 
-.w-\[208px\] {
+.h-\[96px\]{
+  height: 96px;
+}
+
+.w-\[192px\]{
+  width: 192px;
+}
+
+.w-\[208px\]{
   width: 208px;
 }
 
-.w-\[249px\] {
+.w-\[249px\]{
   width: 249px;
 }
 
-.w-\[442px\] {
+.w-\[442px\]{
   width: 442px;
 }
 
-.w-\[45vw\] {
+.w-\[45vw\]{
   width: 45vw;
 }
 
-.w-\[489px\] {
+.w-\[489px\]{
   width: 489px;
 }
 
-.w-\[493px\] {
+.w-\[493px\]{
   width: 493px;
 }
 
-.w-\[55vw\] {
+.w-\[55vw\]{
   width: 55vw;
 }
 
-.w-\[599px\] {
+.w-\[599px\]{
   width: 599px;
 }
 
-.flex-col {
+.flex-col{
   flex-direction: column;
 }
 
-.items-center {
+.items-center{
   align-items: center;
 }
 
-.justify-between {
+.justify-between{
   justify-content: space-between;
 }
 
-.rounded-\[30px\] {
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
+.rounded-\[30px\]{
   border-radius: 30px;
 }
 
-.border-\[1px\] {
+.border-\[1px\]{
   border-width: 1px;
 }
 
-.border-secondary {
+.border-secondary{
   --tw-border-opacity: 1;
   border-color: rgb(27 91 49 / var(--tw-border-opacity));
 }
 
-.bg-beige {
+.bg-beige{
   --tw-bg-opacity: 1;
   background-color: rgb(220 193 171 / var(--tw-bg-opacity));
 }
 
-.bg-secondary {
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 240 236 / var(--tw-bg-opacity));
+}
+
+.bg-secondary{
   --tw-bg-opacity: 1;
   background-color: rgb(27 91 49 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
+.bg-transparent{
   background-color: transparent;
 }
 
-.text-\[16px\] {
+.text-\[16px\]{
   font-size: 16px;
 }
 
-.text-\[60px\] {
+.text-\[60px\]{
   font-size: 60px;
 }
 
-.leading-6 {
+.leading-6{
   line-height: 1.5rem;
 }
 
-.leading-\[1\.17\] {
+.leading-\[1\.17\]{
   line-height: 1.17;
 }
 
-.text-secondary {
+.text-secondary{
   --tw-text-opacity: 1;
   color: rgb(27 91 49 / var(--tw-text-opacity));
 }
 
-.text-white {
+.text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -700,11 +731,11 @@ video {
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6{
   font-family: Montserrat, sans-serif;
 }
 
-p, span {
+p, span{
   font-family: Inter, sans-serif;
 }
 
@@ -891,35 +922,56 @@ p, span {
   border: 1px solid var(--secondary)
 }
 
-.hover\:text-secondary:hover {
+.hero__slider-slide {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 250ms opacity ease-in-out;
+  transition-delay: 250ms;
+}
+
+.hero__slider-slide[data-active]{
+  opacity: 1;
+  transition-delay: 0ms;
+}
+
+.hover\:text-secondary:hover{
   --tw-text-opacity: 1;
   color: rgb(27 91 49 / var(--tw-text-opacity));
 }
 
-.hover\:text-white:hover {
+.hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-@media (min-width: 1024px) {
-  .md\:mx-\[89px\] {
+@media (min-width: 1024px){
+  .md\:mx-\[89px\]{
     margin-left: 89px;
     margin-right: 89px;
   }
 
-  .md\:block {
+  .md\:block{
     display: block;
   }
 
-  .md\:hidden {
+  .md\:hidden{
     display: none;
   }
 
-  .md\:flex-row {
+  .md\:flex-row{
     flex-direction: row;
   }
 
-  .md\:justify-between {
+  .md\:justify-between{
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1400px){
+  .lg\:h-\[737px\]{
+    height: 737px;
   }
 }

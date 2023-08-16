@@ -50,8 +50,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[45vw] h-[737px]">
-
+                <div class="w-[45vw] h-[737px] relative" data-slider>
+                    <div data-slides>
+                        <img class="hero__slider-slide lg:h-[737px]" src="../src/assets/photos/hero1.png" data-active />
+                        <img class="hero__slider-slide lg:h-[737px]" src="../src/assets/photos/hero2.jpg" />
+                        <img class="hero__slider-slide lg:h-[737px]" src="../src/assets/photos/hero3.jpg" />
+                    </div>
+                    <div class="w-[192px] h-[96px] bg-primary absolute bottom-0 right-0 flex justify-evenly items-center">
+                        <button class="hero__slider-button last" data-slider-button="last"><img src="../src/assets/icons/arrowLeft.png"/></button>
+                        <button class="hero__slider-button next" data-slider-button="next"><img src="../src/assets/icons/arrowRight.png"/></button>
+                    </div>
                 </div>
             </section>
         </main>
