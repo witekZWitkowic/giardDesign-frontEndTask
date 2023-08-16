@@ -10,6 +10,12 @@
     margin: 0;
     padding: 0;
 }
+h1,h2,h3,h4,h5,h6 {
+    @apply font-montserrat;
+}
+p, span{
+    @apply font-inter;
+}
 
 :root {
     --primary: #F5F0EC;
@@ -143,3 +149,32 @@
     }
 }
 
+/* ______  HERO SECTION ______ */
+.hero__button-portfolio::before, .hero__button-contact::before{
+    transition: .3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    border-radius: 30px;
+  }
+  .hero__button-portfolio:hover::before, .hero__button-contact:hover::before{
+    transition: .3s all ease;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: 1;
+    color: #FFF;
+  }
+  .hero__button-portfolio::before {
+    background-color: var(--secondary);
+    color: #FFF;
+  }
+  .hero__button-contact::before{
+    background-color: var(--beige);
+    border: 1px solid var(--secondary)
+  }
