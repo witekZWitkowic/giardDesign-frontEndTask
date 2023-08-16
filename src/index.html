@@ -5,23 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link href="/dist/output.css" rel="stylesheet">
+        <script src="index.js" defer></script>
     </head>
     <body>
         <header>
-            <section class="h-[72px] flex justify-between items-center mx-[89px]">
-                <img src="./assets/giarddesign.png"/>
-                <div class="w-[442px] flex">
-                    <ul class="flex">
+            <section class="h-[72px] flex md:justify-between items-center md:mx-[89px] mx-[20px]">
+                <div id="navBar_background" class="navBar__background md:hidden block"></div>
+                <img class="z-50 md:block" src="./assets/giarddesign.png"/>
+                <div class="md:hidden block">
+                    <button id="menu_button" class="navBar__button">
+                        <div id="hamburger" class="navBar__button-elem" />
+                    </button>
+                </div>
+                <div id="navBar_list" class="w-[442px] flex navBar__list-position">
+                    <ul class="flex md:flex-row flex-col navBar__list">
                         <li class="navBar__li-animation mr-12"><a href="">Oferta</a></li>
                         <li class="navBar__li-animation mr-12"><a href="">O firmie</a></li>
                         <li class="navBar__li-animation mr-12"><a href="">Realizacje</a></li>
                         <li class="navBar__li-animation mr-12"><a href="">Kontakt</a></li>
+                        <div class="md:block hidden">
+                            <img src="./assets/searchIcon.png"/>
+                        </div>
                     </ul>
-                    <div>
-                        <img src="./assets/searchIcon.png"/>
-                    </div>
-                <div>
-            <section>
+                    
+                </div>
+            </section>
         </header>
         <main></main>
         <footer></footer>

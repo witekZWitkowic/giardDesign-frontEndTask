@@ -1,6 +1,23 @@
+@config "../tailwind.config.js";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ______ VARIABLES && GLOBALS______ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #F5F0EC;
+    --secondary: #1B5B31;
+    --beige: #DCC1AB;
+}
+
+/* ______ Navbar ______ */
 
 .navBar__li-animation {
     display: inline-block;
@@ -14,11 +31,115 @@
     transform: scaleX(0);
     bottom: 0;
     left: 0;
-    background-color: #0087ca;
+    background-color: var(--secondary);
     transform-origin: bottom right;
-    transition: transform 0.38s ease-out;
+    transition: transform 0.30s ease-out;
 }
 .navBar__li-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+.navBar__button{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: #FFF;
+    border-radius: 50%;
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.03);
+    z-index: 25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navBar__button-elem, .navBar__button-elem::before, .navBar__button-elem::after{
+    width: 30px;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: all 0.3s;
+}
+.navBar__button-elem::before, .navBar__button-elem::after{
+    content: '';
+    position: absolute;
+    left: 5px;
+}
+.navBar__button-elem::before{
+    transform: translateY(7px);
+}
+.navBar__button-elem::after{
+    transform: translateY(-7px);
+}
+.navBar__button-elem.active{
+    transform: rotate(45deg);
+}
+.navBar__button-elem.active::after{
+    transform: translateX(70px);
+    left: 5px;
+}
+.navBar__button-elem.active::before{
+    top: 0;
+    transform: rotate(-90deg);
+    left: 0;
+}
+
+@media (max-width: 1023px) {
+    .navBar__li-animation::after{
+        display: none;
+    }
+    .navBar__list {
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-35%, -35%);
+        text-align: center;
+    }
+    .navBar__list li {
+        color: white;
+        font-size: 56px;
+        margin: 15px 0 0 0;
+    }
+    .navBar__list-position.active{
+        opacity: 1;
+        width: 100%;
+        visibility: visible;
+    }
+    .navBar__list-position {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        opacity: 0;
+        width: 0;
+        visibility: hidden;
+        z-index: 20;
+        transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navBar__background {
+        position: fixed;
+        transform: scale(0);
+        top: 16px;
+        right: 22px;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        background: var(--secondary);
+        background-size: cover;
+        background-position: center;
+        z-index: 10;
+        transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    .navBar__background.active{
+        transform: scale(31.5);
+    }
+}
+@media (max-width: 425px) {
+    .navBar__list {
+        transform: translate(-50%, -35%);
+    }
+    .navBar__list li{
+        font-size: 46px;
+    }
+}
+
