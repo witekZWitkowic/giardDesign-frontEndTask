@@ -1,3 +1,4 @@
+
 //Consts
 
 // __ Menu __ //
@@ -5,6 +6,7 @@ const menu_button = document.getElementById("menu_button");
 const navBar_list = document.getElementById("navBar_list");
 const navBar_background = document.getElementById("navBar_background");
 const hamburger = document.getElementById("hamburger");
+const macy = document.getElementById("macy");
 
 // __ Slider __ //
 
@@ -35,3 +37,20 @@ sliderButtons.forEach(button => {
 
     })
 })
+
+//Masonry layout
+
+window.onload = () => {
+    const macy = Macy({
+        container: '#macy',
+        trueOrder: true,
+        waitForImages: false,
+        margin: 43,
+        columns: 4,
+        breakAt: {
+            1441: 3,
+            769: 2,
+            425: 1
+        }
+    });
+}

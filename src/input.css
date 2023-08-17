@@ -224,3 +224,12 @@ p, span{
     background-color: var(--primary);
     border: 1px solid var(--secondary);
   }
+
+  /* ______ MACY LAYOUT ______ */
+
+  .macy-grid{
+    display: none;
+  }
+  .macy-grid:nth-child(-n + 3){
+    display: block;
+  }
