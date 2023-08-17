@@ -13,7 +13,7 @@
 h1,h2,h3,h4,h5,h6 {
     @apply font-montserrat;
 }
-p{
+p {
     line-height: 24px;
 }
 p, span{
@@ -193,4 +193,34 @@ p, span{
   .hero__slider-slide[data-active]{
     opacity: 1;
     transition-delay: 0ms;
+  }
+
+  /* ______ CONTACT ______ */
+  /* Yes, there is some boiler-plate code that I'm aware of, but I wanted to stick with the grouping of the code */
+
+  .contact__button::before {
+    transition: .3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    border-radius: 30px;
+  }
+  .contact__button:hover::before{
+    transition: .3s all ease;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: 1;
+  }
+  .contact__button:hover > span > img{
+    filter: invert(28%) sepia(21%) saturate(1204%) hue-rotate(88deg) brightness(56%) contrast(97%);
+  }
+  .contact__button::before{
+    background-color: var(--primary);
+    border: 1px solid var(--secondary);
   }

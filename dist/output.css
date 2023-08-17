@@ -565,12 +565,30 @@ video {
   margin-right: 20px;
 }
 
+.my-\[135px\]{
+  margin-top: 135px;
+  margin-bottom: 135px;
+}
+
+.mx-\[96px\]{
+  margin-left: 96px;
+  margin-right: 96px;
+}
+
+.mb-\[12px\]{
+  margin-bottom: 12px;
+}
+
 .mb-\[160px\]{
   margin-bottom: 160px;
 }
 
 .mb-\[32px\]{
   margin-bottom: 32px;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
 }
 
 .ml-\[89px\]{
@@ -597,8 +615,16 @@ video {
   margin-top: 16px;
 }
 
+.mt-\[32px\]{
+  margin-top: 32px;
+}
+
 .mt-\[44px\]{
   margin-top: 44px;
+}
+
+.mt-\[63px\]{
+  margin-top: 63px;
 }
 
 .mt-\[72px\]{
@@ -609,24 +635,36 @@ video {
   margin-top: 96px;
 }
 
-.mt-\[\]{
-  margin-top: ;
+.ml-\[64px\]{
+  margin-left: 64px;
 }
 
-.mb-\[12px\]{
-  margin-bottom: 12px;
+.mr-\[92px\]{
+  margin-right: 92px;
 }
 
-.mt-\[32px\]{
-  margin-top: 32px;
+.mr-\[81px\]{
+  margin-right: 81px;
 }
 
-.mt-\[63pc\]{
-  margin-top: 63pc;
+.ml-\[43px\]{
+  margin-left: 43px;
 }
 
-.mt-\[63px\]{
-  margin-top: 63px;
+.ml-\[35px\]{
+  margin-left: 35px;
+}
+
+.ml-\[96px\]{
+  margin-left: 96px;
+}
+
+.mr-\[96px\]{
+  margin-right: 96px;
+}
+
+.ml-\[88px\]{
+  margin-left: 88px;
 }
 
 .block{
@@ -641,6 +679,10 @@ video {
   display: none;
 }
 
+.h-\[110px\]{
+  height: 110px;
+}
+
 .h-\[28px\]{
   height: 28px;
 }
@@ -649,8 +691,16 @@ video {
   height: 370px;
 }
 
+.h-\[450px\]{
+  height: 450px;
+}
+
 .h-\[50px\]{
   height: 50px;
+}
+
+.h-\[720px\]{
+  height: 720px;
 }
 
 .h-\[72px\]{
@@ -685,6 +735,10 @@ video {
   width: 249px;
 }
 
+.w-\[250px\]{
+  width: 250px;
+}
+
 .w-\[378px\]{
   width: 378px;
 }
@@ -709,6 +763,10 @@ video {
   width: 55vw;
 }
 
+.w-\[596px\]{
+  width: 596px;
+}
+
 .w-\[599px\]{
   width: 599px;
 }
@@ -721,20 +779,36 @@ video {
   width: 100%;
 }
 
+.w-\[50vw\]{
+  width: 50vw;
+}
+
+.w-\[500px\]{
+  width: 500px;
+}
+
 .flex-col{
   flex-direction: column;
+}
+
+.items-start{
+  align-items: flex-start;
 }
 
 .items-center{
   align-items: center;
 }
 
-.justify-between{
-  justify-content: space-between;
+.justify-end{
+  justify-content: flex-end;
 }
 
-.justify-around{
-  justify-content: space-around;
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
 }
 
 .justify-evenly{
@@ -755,6 +829,11 @@ video {
 
 .border-b-\[1px\]{
   border-bottom-width: 1px;
+}
+
+.border-primary{
+  --tw-border-opacity: 1;
+  border-color: rgb(245 240 236 / var(--tw-border-opacity));
 }
 
 .border-secondary{
@@ -786,9 +865,19 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .px-\[40px\]{
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.px-\[89px\]{
+  padding-left: 89px;
+  padding-right: 89px;
 }
 
 .py-\[48px\]{
@@ -805,20 +894,24 @@ video {
   font-size: 12px;
 }
 
-.text-\[16px\]{
-  font-size: 16px;
-}
-
-.text-\[60px\]{
-  font-size: 60px;
-}
-
 .text-\[14px\]{
   font-size: 14px;
 }
 
+.text-\[16px\]{
+  font-size: 16px;
+}
+
 .text-\[28px\]{
   font-size: 28px;
+}
+
+.text-\[48px\]{
+  font-size: 48px;
+}
+
+.text-\[60px\]{
+  font-size: 60px;
 }
 
 .font-medium{
@@ -829,20 +922,29 @@ video {
   font-style: italic;
 }
 
-.leading-\[1\.17\]{
-  line-height: 1.17;
+.leading-\[1\.15\]{
+  line-height: 1.15;
 }
 
 .leading-\[1\.15rem\]{
   line-height: 1.15rem;
 }
 
-.tracking-widest{
-  letter-spacing: 0.1em;
+.leading-\[1\.17\]{
+  line-height: 1.17;
 }
 
 .tracking-tighter{
   letter-spacing: -0.05em;
+}
+
+.tracking-widest{
+  letter-spacing: 0.1em;
+}
+
+.text-primary{
+  --tw-text-opacity: 1;
+  color: rgb(245 240 236 / var(--tw-text-opacity));
 }
 
 .text-secondary{
@@ -855,8 +957,9 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\]{
-  color: ;
+.brightness-\[100\]{
+  --tw-brightness: brightness(100);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /* ______ VARIABLES && GLOBALS______ */
@@ -871,7 +974,7 @@ h1,h2,h3,h4,h5,h6{
   font-family: Montserrat, sans-serif;
 }
 
-p{
+p {
   line-height: 24px;
 }
 
@@ -1077,6 +1180,39 @@ p, span{
   transition-delay: 0ms;
 }
 
+/* ______ CONTACT ______ */
+
+/* Yes, there is some boiler-plate code that I'm aware of, but I wanted to stick with the grouping of the code */
+
+.contact__button::before {
+  transition: .3s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  border-radius: 30px;
+}
+
+.contact__button:hover::before{
+  transition: .3s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+.contact__button:hover > span > img{
+  filter: invert(28%) sepia(21%) saturate(1204%) hue-rotate(88deg) brightness(56%) contrast(97%);
+}
+
+.contact__button::before{
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+}
+
 .hover\:text-secondary:hover{
   --tw-text-opacity: 1;
   color: rgb(27 91 49 / var(--tw-text-opacity));
@@ -1111,7 +1247,15 @@ p, span{
 }
 
 @media (min-width: 1400px){
+  .lg\:h-\[720px\]{
+    height: 720px;
+  }
+
   .lg\:h-\[737px\]{
     height: 737px;
+  }
+
+  .lg\:h-\[729px\]{
+    height: 729px;
   }
 }
