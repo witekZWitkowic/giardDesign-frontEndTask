@@ -12,6 +12,8 @@ const macy = document.getElementById("macy");
 const images = document.querySelectorAll(".macy-grid img");
 const singleImage = document.querySelector('.gallery__singleImage');
 const poppedImage = document.querySelector('.gallery__singleImage img');
+const moreImagesButton = document.querySelector('.moreImages__button')
+const blurredBackground = document.querySelector('.moreImages__backgroud');
 
 // __ Slider __ //
 const sliderButtons = document.querySelectorAll("[data-slider-button]")
@@ -49,8 +51,8 @@ sliderButtons.forEach(button => {
 window.onload = () => {
     const macy = Macy({
         container: '#macy',
-        trueOrder: true,
-        waitForImages: false,
+        trueOrder: false,
+        waitForImages: true,
         margin: 43,
         columns: 4,
         breakAt: {
@@ -61,12 +63,20 @@ window.onload = () => {
     });
 }
 
-
 //Display only first 9 pictures
 
 for(let i = 9; i < images.length; i++) {
-    images[i].style.display = 'none' 
+    images[i].style.display = 'none'
 }
+const moreImagesHandler = () => {
+    for(let image of images){
+        image.style.display = 'block';
+    }
+    moreImagesButton.style.display = 'none';
+    blurredBackground.style.display = 'none';
+}
+
+moreImagesButton.addEventListener('click', moreImagesHandler);
 
 //PopUp Gallery
 images.forEach((image) => {

@@ -269,13 +269,44 @@ p, span{
     border: 1px solid var(--secondary);
   }
 
+  /* ______ IMAGES SECTION ______ */
+
+  .moreImages__button::before {
+    transition: .3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    border-radius: 30px;
+  }
+  .moreImages__button:hover::before{
+    transition: .3s all ease;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: 1;
+  }
+  .moreImages__button:hover > span > img{
+    filter: invert(100%) sepia(0%) saturate(18%) hue-rotate(16deg) brightness(106%) contrast(106%);
+  }
+  .moreImages__button::before{
+    background-color: #111111;
+  }
+  .moreImages__backgroud {
+    background: linear-gradient(0deg, rgba(220,193,171,1) 0%, rgba(255,255,255,0) 100%);
+  }
+
   /* ______ POPUP IMAGE ______ */
   
   .gallery__singleImage {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #00000099;
+    background-color: #000000CC;
     height: 100%;
     width: 100%;
     z-index: 100;
