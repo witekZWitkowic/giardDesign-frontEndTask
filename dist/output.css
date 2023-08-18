@@ -638,6 +638,10 @@ video {
   margin-left: 24px;
 }
 
+.ml-\[5px\]{
+  margin-left: 5px;
+}
+
 .ml-\[64px\]{
   margin-left: 64px;
 }
@@ -648,10 +652,6 @@ video {
 
 .ml-\[89px\]{
   margin-left: 89px;
-}
-
-.mr-12{
-  margin-right: 3rem;
 }
 
 .mr-\[10px\]{
@@ -700,6 +700,10 @@ video {
 
 .block{
   display: block;
+}
+
+.\!flex{
+  display: flex !important;
 }
 
 .flex{
@@ -806,6 +810,10 @@ video {
   width: 192px;
 }
 
+.w-\[194px\]{
+  width: 194px;
+}
+
 .w-\[208px\]{
   width: 208px;
 }
@@ -870,8 +878,8 @@ video {
   width: 100%;
 }
 
-.w-\[194px\]{
-  width: 194px;
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .flex-col{
@@ -1110,6 +1118,12 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 /* ______ VARIABLES && GLOBALS______ */
 
 * {
@@ -1145,6 +1159,39 @@ p, span{
 }
 
 /* ______ Navbar ______ */
+
+.navBar__offer-dropdown-closed, .navBar__offer-dropdown-open {
+  width: 120px;
+  height: 135px;
+  font-weight: 500;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  position: absolute;
+  cursor: pointer;
+  top: 35px;
+  right: -28px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.navBar__offer-dropdown-closed {
+  opacity: 0;
+  transform: translateY(-200px);
+}
+
+.navBar__offer-dropdown-open{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navBar__dropdown-arrow{
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transform: rotate(-180deg);
+}
 
 .navBar__li-animation {
   display: inline-block;
@@ -1481,6 +1528,28 @@ p, span{
 
 .footer__button::before {
   background-color: #111111;
+}
+
+.pipi ul {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.pipi img{
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.pipi:hover ul {
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.3 all ease-in-out;
+}
+
+.pipi:hover img{
+  transform: rotate(-180deg);
+  transition: 0.3 all ease-in-out;
 }
 
 .hover\:scale-\[1\.01\]:hover{

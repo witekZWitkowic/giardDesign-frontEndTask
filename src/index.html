@@ -18,12 +18,19 @@
                         <div id="hamburger" class="navBar__button-elem" />
                     </button>
                 </div>
-                <div id="navBar_list" class="w-[442px] flex navBar__list-position">
-                    <ul class="flex md:flex-row flex-col navBar__list">
-                        <li class="navBar__li-animation mr-12"><a href="#offer">Oferta</a></li>
-                        <li class="navBar__li-animation mr-12"><a href="#about">O firmie</a></li>
-                        <li class="navBar__li-animation mr-12"><a href="#implementation">Realizacje</a></li>
-                        <li class="navBar__li-animation mr-12"><a href="#contact">Kontakt</a></li>
+                <div id="navBar_list" class="w-[442px] navBar__list-position">
+                    <ul class="flex md:flex-row md:justify-between flex-col navBar__list">
+                        <li class="navBar__li-animation navBar__dropdown text-[14px] cursor-pointer items-center !flex relative">
+                            <span>Oferta</span><img class="ml-[5px] transition-all" src="../src/assets/icons/offerDropDown.svg"/>
+                            <ul class="navBar__offer-dropdown-closed">
+                                <li class="navBar__li-animation"><a href="#offer">Projekty</a></li>
+                                <li class="navBar__li-animation"><a href="#offer">Wizualizacje</a></li>
+                                <li class="navBar__li-animation"><a href="#offer">Realizacje</a></li>
+                            </ul>
+                        </li>
+                        <li class="navBar__li-animation text-[14px]"><a href="#about">O firmie</a></li>
+                        <li class="navBar__li-animation text-[14px]"><a href="#implementation">Realizacje</a></li>
+                        <li class="navBar__li-animation text-[14px]"><a href="#contact">Kontakt</a></li>
                         <div class="md:block hidden">
                             <img src="./assets/searchIcon.png"/>
                         </div>
@@ -195,7 +202,7 @@
                     <div class="flex justify-between items-center">
                         <img class="w-[115px] h-[19px]" src="../src/assets/logoFooter.png" alt="GiardDesign logo" />
                         <div>
-                            <span class="tracking-[-0.01em] text-primary">Daj znać, co możęmy dla Ciebie zrobić!</span>
+                            <span class="tracking-[-0.01em] text-primary">Daj znać, co możemy dla Ciebie zrobić!</span>
                             <button class="relative footer__button text-white w-[208px] h-[50px] bg-secondary border-[1px] border-secondary rounded-[30px] ml-[24px]">
                                 <span class="relative z-10 flex justify-center text-[16px]"><a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank">Skontaktuj się z nami</a></span>
                             </button>

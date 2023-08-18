@@ -7,6 +7,10 @@ const navBar_list = document.getElementById("navBar_list");
 const navBar_background = document.getElementById("navBar_background");
 const hamburger = document.getElementById("hamburger");
 const navbar_li = document.querySelectorAll(".navBar__list li");
+const dropdown = document.querySelector('.navBar__dropdown')
+const dropdownOpen = document.querySelector(".navBar__offer-dropdown-open");
+const dropdownClosed = document.querySelector('.navBar__offer-dropdown-closed');
+const littleArrowDropdown = document.querySelector('.navBar__dropdown img')
 
 // __ Gallery __ //
 const macy = document.getElementById("macy");
@@ -26,13 +30,20 @@ const toggleMenu = () => {
     navBar_background.classList.toggle("active");
     hamburger.classList.toggle("active");
 }
-
 menu_button.addEventListener("click", toggleMenu);
 
 navbar_li.forEach((li) => {
     li.addEventListener("click", toggleMenu)
 })
 
+//Dropdown toggle
+
+const toggleDropdown = () => {
+    dropdownClosed.classList.toggle('navBar__offer-dropdown-open')
+    littleArrowDropdown.classList.toggle('navBar__dropdown-arrow')
+}
+
+dropdown.addEventListener('click', toggleDropdown);
 
 //Slider
 
