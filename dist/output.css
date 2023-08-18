@@ -702,6 +702,10 @@ video {
   height: 28px;
 }
 
+.h-\[365px\]{
+  height: 365px;
+}
+
 .h-\[370px\]{
   height: 370px;
 }
@@ -752,6 +756,10 @@ video {
 
 .w-\[250px\]{
   width: 250px;
+}
+
+.w-\[373px\]{
+  width: 373px;
 }
 
 .w-\[378px\]{
@@ -831,6 +839,10 @@ video {
 }
 
 .border-\[1px\]{
+  border-width: 1px;
+}
+
+.border{
   border-width: 1px;
 }
 
@@ -1195,6 +1207,51 @@ p, span{
   transition-delay: 0ms;
 }
 
+/* ______ OFFER ______*/
+
+.offer_hoverAnimation-box {
+  position: relative;
+  width: 378px;
+  height: 370px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.offer_hoverAnimation-box:hover::after{
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent, transparent, transparent, var(--beige));
+  animation: animate 5s linear infinite;
+  animation-delay: -2.5s;
+  z-index: 1;
+}
+
+.offer_hoverAnimation-box:hover::before{
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent, transparent, transparent, var(--beige));
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* ______ CONTACT ______ */
 
 /* Yes, there is some boiler-plate code that I'm aware of, but I wanted to stick with the grouping of the code */
@@ -1228,14 +1285,33 @@ p, span{
   border: 1px solid var(--secondary);
 }
 
-/* ______ MACY LAYOUT ______ */
+/* ______ POPUP IMAGE ______ */
 
-.macy-grid{
+.gallery__singleImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000099;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
   display: none;
 }
 
-.macy-grid:nth-child(-n + 3){
-  display: block;
+.gallery__singleImage img {
+  position: absolute;
+  max-width: 600px;
+  max-height: 600px;
+  z-index: 101;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover\:scale-\[1\.01\]:hover{
+  --tw-scale-x: 1.01;
+  --tw-scale-y: 1.01;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:text-secondary:hover{

@@ -6,13 +6,18 @@ const menu_button = document.getElementById("menu_button");
 const navBar_list = document.getElementById("navBar_list");
 const navBar_background = document.getElementById("navBar_background");
 const hamburger = document.getElementById("hamburger");
+
+// __ Gallery __ //
 const macy = document.getElementById("macy");
+const images = document.querySelectorAll(".macy-grid img");
+const singleImage = document.querySelector('.gallery__singleImage');
+const poppedImage = document.querySelector('.gallery__singleImage img');
 
 // __ Slider __ //
-
 const sliderButtons = document.querySelectorAll("[data-slider-button]")
 
 //Open / Close hamburgerMenu
+
 const toggleMenu = () => {
     navBar_list.classList.toggle("active");
     navBar_background.classList.toggle("active");
@@ -22,6 +27,7 @@ const toggleMenu = () => {
 menu_button.addEventListener("click", toggleMenu);
 
 //Slider
+
 sliderButtons.forEach(button => {
     button.addEventListener("click", () => {
         const slide = button.dataset.hero__slider-button === "next" ? 1 : -1;
@@ -49,8 +55,32 @@ window.onload = () => {
         columns: 4,
         breakAt: {
             1441: 3,
-            769: 2,
-            425: 1
+            1000: 2,
+            800: 1
         }
     });
 }
+
+
+//Display only first 9 pictures
+
+for(let i = 9; i < images.length; i++) {
+    images[i].style.display = 'none' 
+}
+
+//PopUp Gallery
+images.forEach((image) => {
+    image.onclick = () =>{
+        singleImage.style.display === 'block' 
+        ? singleImage.style.display = 'none'
+        : singleImage.style.display = 'block';
+
+        poppedImage.src = image.getAttribute('src');   
+    }
+})
+
+const turnOffImageDisplay = () => {
+    singleImage.style.display = 'none';
+}
+
+poppedImage.addEventListener('click', turnOffImageDisplay)
