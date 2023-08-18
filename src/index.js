@@ -6,6 +6,7 @@ const menu_button = document.getElementById("menu_button");
 const navBar_list = document.getElementById("navBar_list");
 const navBar_background = document.getElementById("navBar_background");
 const hamburger = document.getElementById("hamburger");
+const navbar_li = document.querySelectorAll(".navBar__list li");
 
 // __ Gallery __ //
 const macy = document.getElementById("macy");
@@ -27,6 +28,11 @@ const toggleMenu = () => {
 }
 
 menu_button.addEventListener("click", toggleMenu);
+
+navbar_li.forEach((li) => {
+    li.addEventListener("click", toggleMenu)
+})
+
 
 //Slider
 

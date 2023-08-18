@@ -20,10 +20,10 @@
                 </div>
                 <div id="navBar_list" class="w-[442px] flex navBar__list-position">
                     <ul class="flex md:flex-row flex-col navBar__list">
-                        <li class="navBar__li-animation mr-12"><a href="">Oferta</a></li>
-                        <li class="navBar__li-animation mr-12"><a href="">O firmie</a></li>
-                        <li class="navBar__li-animation mr-12"><a href="">Realizacje</a></li>
-                        <li class="navBar__li-animation mr-12"><a href="">Kontakt</a></li>
+                        <li class="navBar__li-animation mr-12"><a href="#offer">Oferta</a></li>
+                        <li class="navBar__li-animation mr-12"><a href="#about">O firmie</a></li>
+                        <li class="navBar__li-animation mr-12"><a href="#implementation">Realizacje</a></li>
+                        <li class="navBar__li-animation mr-12"><a href="#contact">Kontakt</a></li>
                         <div class="md:block hidden">
                             <img src="./assets/searchIcon.png"/>
                         </div>
@@ -32,7 +32,7 @@
             </section>
         </header>
         <main>
-            <section class="flex">
+            <section id="hero" class="flex">
                 <div class="w-[55vw] h-[737px] bg-beige flex">
                     <div class="w-[599px] ml-[89px] mt-[144px]">
                         <h1 class="text-[60px] leading-[1.17]">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </section>
-            <section class="w-full h-[939px] px-[89px] bg-primary">
+            <section id="offer" class="w-full h-[939px] px-[89px] bg-primary">
                 <div class="flex flex-col items-center">
                     <div class="w-[1040px] mt-[120px]">
                         <span class="text-secondary text-[12px]">Oferta</span>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </section>
-            <section class="flex">
+            <section id="about" class="flex">
                 <div class="w-[45vw] h-[720px] relative">
                     <div>
                         <img class="object-fill w-full lg:h-[720px]" src="../src/assets/photos/hero1.png" />
@@ -136,7 +136,7 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-beige pt-[120px]">
+            <section id="implementation" class="bg-beige pt-[120px]">
                 <div class="ml-[200px] pb-[96px]">
                     <span class="text-secondary text-[12px]">Realizacje</span>
                     <h2 class="text-[48px] mt-[16px]">Nasze <span class="italic">projekty</span></h2>
@@ -171,9 +171,60 @@
                         </button>
                     </div>
                 </div>
-                
+            </section>
+            <section id="contact" class="w-full h-[478px] py-[60px] bg-primary">
+                <div class="flex justify-center items-center">
+                    <div class="w-[70vw] h-[358px] bg-secondary flex items-center justify-center">
+                        <h3 class="w-[599px] tracking-[-0.02em] leading-[1.2em] text-[40px] text-primary mt-[11px]">
+                            Zostańmy w kontakcie! <br />
+                            Znajdziesz nas na <span class="italic tracking-[-0.01em]">Instagramie.</span>
+                        </h3>
+                        <div class="w-[157px] h-[117px] ml-[64px] flex flex-col">
+                            <p class="text-[16px] tracking-[-0.01em] text-primary mb-[24px]">Śledź nasze najnowsze realizacje!</p>
+                            <button class="relative instagram__button  text-secondary hover:text-white w-[123px] h-[50px] bg-white border-[1px] border-white rounded-[30px]">
+                                <span class="relative z-10 flex justify-center text-[16px]"><a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank">Instagram</a></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
-        <footer></footer>
+        <footer class="w-full h-[499px] pb-[120px] pt-[80px] bg-[#111111]">
+            <div class=" flex flex-col justify-center items-center">
+                <div class="w-[70vw] h-[195px] flex flex-col justify-between">
+                    <div class="flex justify-between items-center">
+                        <img class="w-[115px] h-[19px]" src="../src/assets/logoFooter.png" alt="GiardDesign logo" />
+                        <div>
+                            <span class="tracking-[-0.01em] text-primary">Daj znać, co możęmy dla Ciebie zrobić!</span>
+                            <button class="relative footer__button text-white w-[208px] h-[50px] bg-secondary border-[1px] border-secondary rounded-[30px] ml-[24px]">
+                                <span class="relative z-10 flex justify-center text-[16px]"><a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank">Skontaktuj się z nami</a></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full h-[1px] bg-primary"></div>
+                    <div>
+                        <div class="flex justify-between">
+                            <ul class="w-[379px] text-[14px] text-primary flex justify-between">
+                                <li>Kontakt</li>
+                                <li>Instagram</li>
+                                <li>Facebook</li>
+                                <li>LinkedIn</li>
+                            </ul>
+                            <div>
+                                <span class="text-primary">000-000-000</span>
+                                <span class="text-primary">giarddesign@kontakt.pl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[70vw] flex justify-between mt-[120px]">
+                    <span class="text-primary">Prawa zastrzeżone &copy; 2022</span>
+                    <div class="w-[194px] flex justify-between">
+                        <span class="text-primary">made by</span>
+                        <img src="../src/assets/adRespectLogo.png"/>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

@@ -10,6 +10,12 @@
     margin: 0;
     padding: 0;
 }
+#about, #contact {
+    scroll-margin-top: 100px;
+}
+html {
+    scroll-behavior: smooth;
+}
 h1,h2,h3,h4,h5,h6 {
     @apply font-montserrat;
 }
@@ -271,7 +277,7 @@ p, span{
 
   /* ______ IMAGES SECTION ______ */
 
-  .moreImages__button::before {
+  .moreImages__button::before, .instagram__button::before, .footer__button::before {
     transition: .3s all ease;
     position: absolute;
     top: 0;
@@ -282,7 +288,7 @@ p, span{
     content: "";
     border-radius: 30px;
   }
-  .moreImages__button:hover::before{
+  .moreImages__button:hover::before, .instagram__button:hover::before, .footer__button:hover::before{
     transition: .3s all ease;
     z-index: -1;
     left: 0;
@@ -320,4 +326,16 @@ p, span{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  /* ______ INSTAGRAM SECTION ______ */
+
+  .instagram__button:hover::before {
+    background-color: var(--secondary);
+  }
+
+  /* ______ FOOTER SECTION ______ */
+
+  .footer__button::before {
+    background-color: #111111;
   }
