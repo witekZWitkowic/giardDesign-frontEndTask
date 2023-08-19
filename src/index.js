@@ -59,7 +59,6 @@ sliderButtons.forEach(button => {
 
         slides.children[newIndex].dataset.active = true;
         delete activeSlide.dataset.active;
-
     })
 })
 
@@ -81,7 +80,7 @@ window.onload = () => {
 }
 
 const moreImagesHandler = () => {
-    document.querySelector('.macy-grid-overflow-hidden').style.maxHeight = "4000px";
+    document.querySelector('.macy-grid-overflow-hidden').style.maxHeight = "7000px";
     moreImagesButton.style.display = 'none';
     blurredBackground.style.display = 'none';
 }
@@ -91,16 +90,17 @@ moreImagesButton.addEventListener('click', moreImagesHandler);
 //PopUp Gallery
 images.forEach((image) => {
     image.onclick = () =>{
-        singleImage.style.display === 'block' 
-        ? singleImage.style.display = 'none'
-        : singleImage.style.display = 'block';
+        singleImage.classList.toggle('gallery__singleImage-open')
 
-        poppedImage.src = image.getAttribute('src');   
+        poppedImage.src = image.getAttribute('src');
+        poppedImage.alt = image.getAttribute('alt');
+        document.querySelector('.gallery__singleImage span').innerHTML = poppedImage.alt
     }
 })
 
 const turnOffImageDisplay = () => {
-    singleImage.style.display = 'none';
+
+    singleImage.classList.toggle('gallery__singleImage-open')
 }
 
 poppedImage.addEventListener('click', turnOffImageDisplay)

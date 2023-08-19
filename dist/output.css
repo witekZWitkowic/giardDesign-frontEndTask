@@ -610,6 +610,10 @@ video {
   margin-bottom: 135px;
 }
 
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
 .mb-\[100px\]{
   margin-bottom: 100px;
 }
@@ -1045,6 +1049,10 @@ video {
   font-size: 16px;
 }
 
+.text-\[20px\]{
+  font-size: 20px;
+}
+
 .text-\[24px\]{
   font-size: 24px;
 }
@@ -1453,11 +1461,18 @@ p, span, li{
   background-color: #000000CC;
   height: 100%;
   width: 100%;
-  z-index: 100;
-  display: none;
+  z-index: -10;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
-.gallery__singleImage img {
+.gallery__singleImage-open {
+  opacity: 1;
+  z-index: 100;
+  transition: all 0.3s;
+}
+
+.gallery__singleImage div {
   position: absolute;
   max-width: 600px;
   max-height: 600px;
@@ -1465,6 +1480,15 @@ p, span, li{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+
+.gallery__singleImage-iconsBrightness {
+  filter: invert(100%) sepia(0%) saturate(18%) hue-rotate(16deg) brightness(106%) contrast(106%);
+}
+
+.grid-item {
+  cursor: pointer;
 }
 
 /* ______ INSTAGRAM SECTION ______ */
@@ -1512,6 +1536,10 @@ p, span, li{
   .offer_hoverAnimation-box:hover::after, .offer_hoverAnimation-box:hover::before{
     width: 400px;
     height: 400px;
+  }
+
+  .macy-grid-overflow-hidden{
+    max-height: 1075px;
   }
 }
 
