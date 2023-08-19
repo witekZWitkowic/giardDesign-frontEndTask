@@ -180,12 +180,15 @@ p, span, li{
     filter: invert(100%) sepia(0%) saturate(18%) hue-rotate(16deg) brightness(806%) contrast(106%);
   }
   .hero__slider-slide {
-    object-fit: fill;
     width: 100%;
     position: absolute;
     opacity: 0;
     transition: 250ms opacity ease-in-out;
     transition-delay: 250ms;
+  }
+  .hero__slider-img{
+    width: 100%;
+    object-fit: fill;
   }
   .hero__slider-slide[data-active]{
     opacity: 1;
@@ -455,6 +458,9 @@ p, span, li{
     height: 285px;
     top: 75px;
     right: -55px;
+  }
+  .navBar__list{
+    left: 37%
   }
     .navBar__list li{
         font-size: 52px;

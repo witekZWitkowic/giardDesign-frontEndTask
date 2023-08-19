@@ -33,43 +33,74 @@
                         <li class="navBar__li-animation text-[14px]"><a href="#contact">Kontakt</a></li>
                         <li class="md:flex hidden relative cursor-pointer z-[100]">
                             <button class="navBar__search-button"><img src="./assets/searchIcon.png"/></button>
-                            <input placeholder="Znajdź swoją inspirację!" class="placeholder-[#1B5B31AA] navBar__input transition-all  text-black absolute rounded-[30px] outline-none">
+                            <input placeholder="Znajdź swoją inspirację!" class="placeholder-[#1B5B31AA] navBar__input transition-all  text-black absolute rounded-[30px] outline-[#1B5B3122]">
                         </li>
                     </ul>
                 </div>
             </section>
         </header>
         <main>
-            <section id="hero" class="flex sm:flex-row flex-col">
-                <div class="md:w-[55vw] w-full lg:h-[737px] h-[494px] bg-beige flex ">
-                    <div class="lg:w-[599px] md:w-[522px] ss:w-[390px] w-[360px] lg:ml-[89px] md:ml-[68px] ss:ml-[32px] ml-3 lg:mt-[144px] md:mt-[84px] mt-[64px]">
-                        <h1 class="lg:text-[60px] text-[42px] leading-[1.17]">
-                            Nowoczesna aranżacja <br/>Twojego ogrodu
-                        </h1>
-                        <p class="lg:w-[489px] md:w-[420px] ss:w-[380px] w-[355px] lg:text-[16px] text-[14px] mt-[44px]">
-                            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.
-                        </p>
-                        <div class="lg:w-[493px] md:w-[420px] ss:w-[370px] w-[355px] md:mt-[72px] mt-[52px] mr-0 flex justify-between">
-                            <button class="relative hero__button-contact text-white md:text-[14px] text-[13px] hover:text-secondary lg:w-[208px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-secondary rounded-[30px]">
-                                <span class="relative z-10">Skontaktuj się z nami</span>
-                            </button>
-                            <button class="relative hero__button-portfolio text-secondary hover:text-white lg:w-[249px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-transparent lg:text-[16px] md:text-[14px] text-[13px] border-[1px] border-secondary rounded-[30px]">
-                                <span class="relative z-10 flex justify-center">Zobacz nasze realizacje <img class="ml-2" src="../src/assets/icons/smallArrowDownGreen.svg"/></span>
-                            </button>
+            <section id="hero" class="lg:h-[737px] h-[494px] relative"  data-slider>
+                <div class="w-full" data-slides>
+                    <div class="hero__slider-slide flex flex-row" data-active>
+                        <div class=" md:w-[55vw] w-full lg:h-[737px] h-[494px] bg-beige flex ">
+                            <div class="lg:w-[599px] md:w-[522px] ss:w-[390px] w-[360px] lg:ml-[89px] md:ml-[68px] ss:ml-[32px] ml-3 lg:mt-[144px] md:mt-[84px] mt-[64px]">
+                                <h1 class="lg:text-[60px] text-[42px] leading-[1.17]">
+                                    Nowoczesna aranżacja <br/>Twojego ogrodu
+                                </h1>
+                                <p class="lg:w-[489px] md:w-[420px] ss:w-[380px] w-[355px] lg:text-[16px] text-[14px] mt-[44px]">
+                                    Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.
+                                </p>
+                                <div class="lg:w-[493px] md:w-[420px] ss:w-[370px] w-[355px] md:mt-[72px] mt-[52px] mr-0 flex justify-between">
+                                    <a href="#contact"><button class="relative hero__button-contact text-white md:text-[14px] text-[13px] hover:text-secondary lg:w-[208px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-secondary rounded-[30px]">
+                                        <span class="relative z-10">Skontaktuj się z nami</span>
+                                    </button></a>
+                                    <a href="#implementation"><button class="relative hero__button-portfolio text-secondary hover:text-white lg:w-[249px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-transparent lg:text-[16px] md:text-[14px] text-[13px] border-[1px] border-secondary rounded-[30px]">
+                                        <span class="relative z-10 flex justify-center">Zobacz nasze realizacje <img class="ml-2" src="../src/assets/icons/smallArrowDownGreen.svg"/></span>
+                                    </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-[45vw] w-full lg:h-[737px] h-[494px] relative">
+                            <div data-slides>
+                                <img class="hero__slider-img lg:h-[737px] h-[494px]" src="../src/assets/photos/hero1.png" />
+                            </div>
+                            <div class="lg:w-[192px] w-[124px] lg:h-[96px] h-[72px] bg-primary absolute bottom-0 right-0 flex justify-evenly items-center">
+                                <button class="hero__slider-button last" data-slider-button="last"><img src="../src/assets/icons/arrowLeft.svg"/></button>
+                                <button class="hero__slider-button next" data-slider-button="next"><img src="../src/assets/icons/arrowRight.svg"/></button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="md:w-[45vw] w-full lg:h-[737px] h-[494px] relative" data-slider>
-                    <div data-slides>
-                        <img class="hero__slider-slide lg:h-[737px] h-[494px]" src="../src/assets/photos/hero1.png" data-active/>
-                        <img class="hero__slider-slide lg:h-[737px] h-[494px]" src="../src/assets/photos/hero2.jpg" />
-                        <img class="hero__slider-slide lg:h-[737px] h-[494px]" src="../src/assets/photos/hero3.jpg" />
+                    <div class="hero__slider-slide flex flex-row" >
+                        <div class="md:w-[55vw] w-full lg:h-[737px] h-[494px] bg-beige flex ">
+                            <div class="lg:w-[599px] md:w-[522px] ss:w-[390px] w-[360px] lg:ml-[89px] md:ml-[68px] ss:ml-[32px] ml-3 lg:mt-[144px] md:mt-[84px] mt-[64px]">
+                                <h1 class="lg:text-[60px] text-[42px] leading-[1.17]">
+                                    Wybitna aranżacja <br/>Twojego ogrodu
+                                </h1>
+                                <p class="lg:w-[489px] md:w-[420px] ss:w-[380px] w-[355px] lg:text-[16px] text-[14px] mt-[44px]">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                                </p>
+                                <div class="lg:w-[493px] md:w-[420px] ss:w-[370px] w-[355px] md:mt-[72px] mt-[52px] mr-0 flex justify-between">
+                                    <a href="#contact"><button class="relative hero__button-contact text-white md:text-[14px] text-[13px] hover:text-secondary lg:w-[208px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-secondary rounded-[30px]">
+                                        <span class="relative z-10">Skontaktuj się z nami</span>
+                                    </button></a>
+                                    <a href="#implementation"><button class="relative hero__button-portfolio text-secondary hover:text-white lg:w-[249px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-transparent lg:text-[16px] md:text-[14px] text-[13px] border-[1px] border-secondary rounded-[30px]">
+                                        <span class="relative z-10 flex justify-center">Zobacz nasze realizacje <img class="ml-2" src="../src/assets/icons/smallArrowDownGreen.svg"/></span>
+                                    </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-[45vw] w-full lg:h-[737px] h-[494px] relative">
+                            <div>
+                                <img class="hero__slider-img lg:h-[737px] h-[494px]" src="../src/assets/photos/hero2.jpg"/>
+                            </div>
+                            <div class="lg:w-[192px] w-[124px] lg:h-[96px] h-[72px] bg-primary absolute bottom-0 right-0 flex justify-evenly items-center">
+                                <button class="hero__slider-button last" data-slider-button="last"><img src="../src/assets/icons/arrowLeft.svg"/></button>
+                                <button class="hero__slider-button next" data-slider-button="next"><img src="../src/assets/icons/arrowRight.svg"/></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="lg:w-[192px] w-[124px] lg:h-[96px] h-[72px] bg-primary absolute bottom-0 right-0 flex justify-evenly items-center">
-                        <button class="hero__slider-button last" data-slider-button="last"><img src="../src/assets/icons/arrowLeft.svg"/></button>
-                        <button class="hero__slider-button next" data-slider-button="next"><img src="../src/assets/icons/arrowRight.svg"/></button>
-                    </div>
-                </div>        
+                </div>    
             </section>
             <section id="offer" class="w-full lg:h-[939px] h-auto lg:px-[89px] px-[25px] lg:pb-0 pb-16 bg-primary">
                 <div class="flex flex-col items-center">
@@ -92,7 +123,7 @@
                             <h3 class="lg:text-[28px] text-[24px] tracking-tighter leading-[1.15rem] mt-[32px] mb-[12px]">Projekty</h3>
                             <p class="lg:text-[14px] text-[12px]">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
                             <button class="h-[28px] lg:mt-[63px] mt-[24px] text-secondary border-b-[1px] border-secondary flex items-center">
-                                <a class="lg:text-[16px] text-[14px] mr-[10px]">Dowiedz się więcej </a><img src="../src/assets/icons/smallArrowRight.svg"/>
+                                <a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank" class="lg:text-[16px] text-[14px] mr-[10px]">Dowiedz się więcej </a><img src="../src/assets/icons/smallArrowRight.svg"/>
                             </button>
                         </div>
                     </div>
@@ -102,7 +133,7 @@
                             <h3 class="lg:text-[28px] text-[24px] tracking-tighter leading-[1.15rem] mt-[32px] mb-[12px]">Wizualizacje</h3>
                             <p class="lg:text-[14px] text-[12px]">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
                             <button class="h-[28px] lg:mt-[63px] mt-[24px] text-secondary border-b-[1px] border-secondary flex items-center">
-                                <a class="lg:text-[16px] text-[14px] mr-[10px]">Dowiedz się więcej </a><img src="../src/assets/icons/smallArrowRight.svg"/>
+                                <a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank" class="lg:text-[16px] text-[14px] mr-[10px]">Dowiedz się więcej </a><img src="../src/assets/icons/smallArrowRight.svg"/>
                             </button>
                         </div>
                     </div>
@@ -112,7 +143,7 @@
                             <h3 class="lg:text-[28px] text-[24px] tracking-tighter leading-[1.15rem] mt-[32px] mb-[12px]">Realizacje</h3>
                             <p class="lg:text-[14px] text-[12px]">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
                             <button class="h-[28px] lg:mt-[63px] mt-[24px] text-secondary border-b-[1px] border-secondary flex items-center">
-                                <a class="lg:text-[16px] text-[14px] mr-[10px]">Zobacz nasze realizacje </a><img src="../src/assets/icons/smallArrowRight.svg"/>
+                                <a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank" class="lg:text-[16px] text-[14px] mr-[10px]">Zobacz nasze realizacje </a><img src="../src/assets/icons/smallArrowRight.svg"/>
                             </button>
                         </div>
                     </div>
@@ -135,11 +166,11 @@
                             Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
                         </p>
                         <div class="lg:w-[493px] w-[230px] lg:mt-[72px] mt-[32px] flex justify-between">
-                            <button class="relative contact__button text-primary border-[1px] border-primary hover:text-secondary w-[208px] h-[50px] bg-secondary rounded-[30px]">
+                            <a href="https://adrespect.pl/" target="_blank"><button class="relative contact__button text-primary border-[1px] border-primary hover:text-secondary w-[208px] h-[50px] bg-secondary rounded-[30px]">
                                 <span class="relative z-10 flex justify-center">
                                     Poznaj nas bliżej <img class="brightness-[100] ml-2" src="../src/assets/icons/smallArrowRight.svg" />
                                 </span>
-                            </button>
+                            </button></a>
                         </div>
                     </div>
                 </div>
@@ -186,7 +217,7 @@
             </section>
             <section id="contact" class="w-full h-[478px] py-[60px] bg-primary">
                 <div class="flex justify-center items-center">
-                    <div class="sm:w-[70vw] w-full h-[358px] bg-secondary flex sm:flex-row flex-col items-center justify-center">
+                    <div class="sm:w-[70vw] w-[90vw] h-[358px] bg-secondary flex sm:flex-row flex-col items-center justify-center">
                         <h3 class="lg:w-[599px] md:w-[340px] w-[270px] tracking-[-0.02em] leading-[1.2em] lg:text-[40px] sm:text-[36px] text-[30px] text-primary mt-[11px]">
                             Zostańmy w kontakcie! <br />
                             Znajdziesz nas na <span class="italic tracking-[-0.01em]">Instagramie.</span>
@@ -203,37 +234,37 @@
         </main>
         <footer class="w-full h-[499px] pb-[120px] pt-[80px] bg-[#111111]">
             <div class=" flex flex-col justify-center items-center">
-                <div class="md:w-[70vw] w-[90vw] h-[195px] flex flex-col justify-between">
-                    <div class="flex justify-between items-center">
-                        <img class="w-[115px] h-[19px]" src="../src/assets/logoFooter.png" alt="GiardDesign logo" />
-                        <div>
-                            <span class="tracking-[-0.01em] text-primary md:text-[16px] text-[13px]">Daj znać, co możemy dla Ciebie zrobić!</span>
-                            <button class="relative footer__button text-white md:w-[208px] w-[158px] h-[50px] bg-secondary border-[1px] border-secondary rounded-[30px] ml-[24px]">
+                <div class="md:w-[70vw] w-[90vw] sm:h-[195px] h-[300px] flex flex-col justify-between">
+                    <div class="flex sm:flex-row flex-col sm:justify-between justify-center items-center">
+                        <img class="sm:w-[115px] w-[140px] sm:h-[19px] h-[30px]" src="../src/assets/logoFooter.png" alt="GiardDesign logo" />
+                        <div class="sm:block flex flex-col items-center">
+                            <span class="tracking-[-0.01em] text-primary md:text-[16px] text-[13px] sm:mt-0 mt-6">Daj znać, co możemy dla Ciebie zrobić!</span>
+                            <button class="relative footer__button text-white md:w-[208px] w-[158px] h-[50px] bg-secondary border-[1px] border-secondary rounded-[30px] sm:ml-[24px] ml-0 sm:mt-0 mt-2">
                                 <span class="relative z-10 flex justify-center md:text-[16px] text-[13px]"><a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank">Skontaktuj się z nami</a></span>
                             </button>
                         </div>
                     </div>
                     <div class="w-full h-[1px] bg-primary"></div>
                     <div>
-                        <div class="flex justify-between items-center">
-                            <ul class="md:w-[379px] w-[320px] md:text-[14px] text-[13px] text-primary flex justify-between">
+                        <div class="flex justify-between items-center sm:flex-row flex-col">
+                            <ul class="md:w-[379px] w-[320px] md:text-[14px] text-[13px] text-primary flex justify-between ">
                                 <li>Kontakt</li>
                                 <li>Instagram</li>
                                 <li>Facebook</li>
                                 <li>LinkedIn</li>
                             </ul>
-                            <div class="md:w-auto w-[260px]">
+                            <div class="md:w-auto w-[260px] sm:mt-0 mt-10">
                                 <span class="text-primary md:text-[16px] text-[14px] md:mr-0 mr-2">000-000-000</span>
                                 <span class="text-primary md:text-[16px] text-[14px]">giarddesign@kontakt.pl</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-[70vw] flex justify-between mt-[120px]">
-                    <span class="text-primary">Prawa zastrzeżone &copy; 2022</span>
-                    <div class="w-[194px] flex justify-between">
-                        <span class="text-primary">made by</span>
-                        <img src="../src/assets/adRespectLogo.png"/>
+                <div class="sm:w-[70vw] w-full flex sm:justify-between justify-evenly items-center sm:mt-[120px] mt-16">
+                    <span class="text-primary sm:text-[16px] text-[12px]">Prawa zastrzeżone &copy; 2022</span>
+                    <div class="sm:w-[194px] w-[165px] flex justify-between items-center">
+                        <span class="text-primary sm:text-[16px] text-[13px]">made by</span>
+                        <img class="sm:scale-[1] scale-[0.9]" src="../src/assets/adRespectLogo.png"/>
                     </div>
                 </div>
             </div>
