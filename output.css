@@ -1016,9 +1016,9 @@ video {
      object-fit: fill;
 }
 
-.px-\[35px\]{
-  padding-left: 35px;
-  padding-right: 35px;
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-\[40px\]{
@@ -1034,11 +1034,6 @@ video {
 .py-\[60px\]{
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .pb-10{
@@ -1766,8 +1761,8 @@ p, span, li{
     margin-left: 24px;
   }
 
-  .sm\:ml-\[45px\]{
-    margin-left: 45px;
+  .sm\:ml-\[35px\]{
+    margin-left: 35px;
   }
 
   .sm\:mt-0{
@@ -1776,10 +1771,6 @@ p, span, li{
 
   .sm\:mt-\[120px\]{
     margin-top: 120px;
-  }
-
-  .sm\:ml-\[35px\]{
-    margin-left: 35px;
   }
 
   .sm\:block{
@@ -1897,6 +1888,10 @@ p, span, li{
     margin-top: 120px;
   }
 
+  .md\:mt-\[62px\]{
+    margin-top: 62px;
+  }
+
   .md\:mt-\[72px\]{
     margin-top: 72px;
   }
@@ -1907,10 +1902,6 @@ p, span, li{
 
   .md\:mt-\[84px\]{
     margin-top: 84px;
-  }
-
-  .md\:mt-\[62px\]{
-    margin-top: 62px;
   }
 
   .md\:block{
