@@ -1,6 +1,5 @@
 
 //Consts
-
 // __ Menu __ //
 const menu_button = document.getElementById("menu_button");
 const navBar_list = document.getElementById("navBar_list");
@@ -11,6 +10,7 @@ const dropdown = document.querySelector('.navBar__dropdown')
 const dropdownOpen = document.querySelector(".navBar__offer-dropdown-open");
 const dropdownClosed = document.querySelector('.navBar__offer-dropdown-closed');
 const littleArrowDropdown = document.querySelector('.navBar__dropdown img')
+const searchButton = document.querySelector('.navBar__search-button');
 
 // __ Gallery __ //
 const macy = document.getElementById("macy");
@@ -23,8 +23,9 @@ const blurredBackground = document.querySelector('.moreImages__backgroud');
 // __ Slider __ //
 const sliderButtons = document.querySelectorAll("[data-slider-button]")
 
-//Open / Close hamburgerMenu
 
+//Functionality
+//Open / Close hamburgerMenu
 const toggleMenu = () => {
     navBar_list.classList.toggle("active");
     navBar_background.classList.toggle("active");
@@ -33,20 +34,26 @@ const toggleMenu = () => {
 menu_button.addEventListener("click", toggleMenu);
 
 navbar_li.forEach((li) => {
-    li.addEventListener("click", toggleMenu)
+    li.classList.contains("navBar__dropdown")
+    ? li.addEventListener("click", null)
+    : li.addEventListener("click", toggleMenu)
 })
 
 //Dropdown toggle
-
 const toggleDropdown = () => {
     dropdownClosed.classList.toggle('navBar__offer-dropdown-open')
     littleArrowDropdown.classList.toggle('navBar__dropdown-arrow')
 }
-
 dropdown.addEventListener('click', toggleDropdown);
 
-//Slider
+//Search button
+const toggleSearch = () => {
+    document.querySelector('.navBar__input').classList.toggle('navBar__search-open')
+}
 
+searchButton.addEventListener('click', toggleSearch);
+
+//Slider
 sliderButtons.forEach(button => {
     button.addEventListener("click", () => {
         const slide = button.dataset.hero__slider-button === "next" ? 1 : -1;
@@ -63,7 +70,6 @@ sliderButtons.forEach(button => {
 })
 
 //Masonry layout
-
 window.onload = () => {
     const macy = Macy({
         container: '#macy',
@@ -74,7 +80,13 @@ window.onload = () => {
         breakAt: {
             1441: 3,
             1000: 2,
-            800: 1
+            800: {
+                margin: {
+                    x: 100,
+                    y: 40,
+                },
+             columns: 1   
+            }
         }
     });
 }
@@ -84,7 +96,6 @@ const moreImagesHandler = () => {
     moreImagesButton.style.display = 'none';
     blurredBackground.style.display = 'none';
 }
-
 moreImagesButton.addEventListener('click', moreImagesHandler);
 
 //PopUp Gallery
@@ -99,8 +110,6 @@ images.forEach((image) => {
 })
 
 const turnOffImageDisplay = () => {
-
     singleImage.classList.toggle('gallery__singleImage-open')
 }
-
 poppedImage.addEventListener('click', turnOffImageDisplay)

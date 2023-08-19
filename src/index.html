@@ -19,7 +19,7 @@
                     </button>
                 </div>
                 <div id="navBar_list" class="w-[442px] navBar__list-position">
-                    <ul class="flex md:flex-row md:justify-between flex-col navBar__list">
+                    <ul class="flex md:flex-row md:justify-between items-center flex-col navBar__list">
                         <li class="navBar__li-animation navBar__dropdown text-[14px] cursor-pointer items-center !flex relative">
                             <span>Oferta</span><img class="ml-[5px] transition-all" src="../src/assets/icons/offerDropDown.svg"/>
                             <ul class="navBar__offer-dropdown-closed">
@@ -31,34 +31,35 @@
                         <li class="navBar__li-animation text-[14px]"><a href="#about">O firmie</a></li>
                         <li class="navBar__li-animation text-[14px]"><a href="#implementation">Realizacje</a></li>
                         <li class="navBar__li-animation text-[14px]"><a href="#contact">Kontakt</a></li>
-                        <div class="md:block hidden">
-                            <img src="./assets/searchIcon.png"/>
-                        </div>
+                        <li class="md:flex hidden relative cursor-pointer z-[100]">
+                            <button class="navBar__search-button"><img src="./assets/searchIcon.png"/></button>
+                            <input placeholder="Znajdź swoją inspirację!" class="placeholder-[#1B5B31AA] navBar__input transition-all  text-black absolute rounded-[30px] outline-none">
+                        </li>
                     </ul>
                 </div>
             </section>
         </header>
         <main>
-            <section id="hero" class="flex">
-                <div class="w-[55vw] lg:h-[737px] h-[494px] bg-beige flex">
-                    <div class="lg:w-[599px] w-[522px] lg:ml-[89px] ml-[68px] lg:mt-[144px] mt-[84px]">
+            <section id="hero" class="flex sm:flex-row flex-col">
+                <div class="md:w-[55vw] w-full lg:h-[737px] h-[494px] bg-beige flex ">
+                    <div class="lg:w-[599px] md:w-[522px] ss:w-[390px] w-[360px] lg:ml-[89px] md:ml-[68px] ss:ml-[32px] ml-3 lg:mt-[144px] md:mt-[84px] mt-[64px]">
                         <h1 class="lg:text-[60px] text-[42px] leading-[1.17]">
                             Nowoczesna aranżacja <br/>Twojego ogrodu
                         </h1>
-                        <p class="lg:w-[489px] w-[420px] lg:text-[16px] text-[14px] mt-[44px]">
+                        <p class="lg:w-[489px] md:w-[420px] ss:w-[380px] w-[355px] lg:text-[16px] text-[14px] mt-[44px]">
                             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.
                         </p>
-                        <div class="lg:w-[493px] w-[420px] mt-[72px] flex justify-between">
-                            <button class="relative hero__button-contact text-white hover:text-secondary lg:w-[208px] w-[190px] h-[50px] bg-secondary rounded-[30px]">
+                        <div class="lg:w-[493px] md:w-[420px] ss:w-[370px] w-[355px] md:mt-[72px] mt-[52px] mr-0 flex justify-between">
+                            <button class="relative hero__button-contact text-white md:text-[14px] text-[13px] hover:text-secondary lg:w-[208px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-secondary rounded-[30px]">
                                 <span class="relative z-10">Skontaktuj się z nami</span>
                             </button>
-                            <button class="relative hero__button-portfolio text-secondary hover:text-white  lg:w-[249px] w-[175px] h-[50px] bg-transparent lg:text-[16px] text-[14px] border-[1px] border-secondary rounded-[30px]">
-                                <span class="relative z-10">Zobacz nasze realizacje</span>
+                            <button class="relative hero__button-portfolio text-secondary hover:text-white lg:w-[249px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-transparent lg:text-[16px] md:text-[14px] text-[13px] border-[1px] border-secondary rounded-[30px]">
+                                <span class="relative z-10 flex justify-center">Zobacz nasze realizacje <img class="ml-2" src="../src/assets/icons/smallArrowDownGreen.svg"/></span>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="w-[45vw] lg:h-[737px] h-[494px] relative" data-slider>
+                <div class="md:w-[45vw] w-full lg:h-[737px] h-[494px] relative" data-slider>
                     <div data-slides>
                         <img class="hero__slider-slide lg:h-[737px] h-[494px]" src="../src/assets/photos/hero1.png" data-active/>
                         <img class="hero__slider-slide lg:h-[737px] h-[494px]" src="../src/assets/photos/hero2.jpg" />
@@ -68,23 +69,23 @@
                         <button class="hero__slider-button last" data-slider-button="last"><img src="../src/assets/icons/arrowLeft.svg"/></button>
                         <button class="hero__slider-button next" data-slider-button="next"><img src="../src/assets/icons/arrowRight.svg"/></button>
                     </div>
-                </div>
+                </div>        
             </section>
-            <section id="offer" class="w-full lg:h-[939px] h-[737px] lg:px-[89px] px-[25px] bg-primary">
+            <section id="offer" class="w-full lg:h-[939px] h-auto lg:px-[89px] px-[25px] lg:pb-0 pb-16 bg-primary">
                 <div class="flex flex-col items-center">
-                    <div class="w-[70vw] mt-[120px]">
+                    <div class="md:w-[70vw] w-full md:mt-[120px] mt-[100px]">
                         <span class="text-secondary text-[12px]">Oferta</span>
-                        <div class="w-[709px]">
-                            <h2 class="text-5xl mt-[16px] mb-[32px]">
+                        <div class="md:w-[709px] ss:w-[400px] ">
+                            <h2 class="md:text-5xl text-4xl mt-[16px] mb-[32px]">
                                 Działamy <span class="italic">kompleksowo</span>
                             </h2>
-                            <p class="tracking-widest font-medium">
+                            <p class="tracking-widest font-medium md:text-[14px] text-[12px]">
                                 Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. 
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between lg:mt-[96px] mt-[78px] lg:mb-[160px] mb-[100px]">
+                <div class="flex md:flex-row flex-col justify-between items-center md:h-auto h-[1000px] lg:mt-[96px] md:mt-[78px] mt-[48px] lg:mb-[160px] mb-[50px]">
                     <div class="lg:w-[378px] w-[300px] lg:h-[370px] h-[295px] bg-white flex flex-col justify-center offer_hoverAnimation-box hover:scale-[1.01]">
                         <div class="px-[40px] lg:py-[48px] py-[38px] lg:w-[373px] w-[295px] lg:h-[365px] h-[290px] z-10 absolute bg-white rounded-[28px]">
                             <img class="lg:w-auto w-[32px]" src="../src/assets/icons/projectsIcon.svg"/>
@@ -117,23 +118,23 @@
                     </div>
                 </div>
             </section>
-            <section id="about" class="flex">
-                <div class="w-[45vw] h-[720px] relative">
+            <section id="about" class="flex sm:flex-row flex-col">
+                <div class="sm:w-[45vw] w-full lg:h-[720px] relative">
                     <div>
-                        <img class="object-fill w-full lg:h-[720px]" src="../src/assets/photos/hero1.png" />
+                        <img class="object-fill w-full lg:h-[720px] h-[482px]" src="../src/assets/photos/about1.png" />
                     </div>
                 </div>
-                <div class="w-[55vw] h-[720px] bg-secondary flex justify-end">
-                    <div class="w-[500px] h-[450px] ml-[88px] mr-[96px] my-[135px] flex flex-col items-start">
+                <div class="sm:w-[55vw] w-full lg:h-[720px] h-[482px] lg:pt-0 pt-10 bg-secondary flex lg:justify-end justify-center">
+                    <div class="lg:w-[500px] w-[350px] lg:h-[450px] lg:ml-[88px] mx-0 my-0 lg:mr-[96px] lg:my-[135px] flex flex-col items-start">
                         <span class="text-[12px] text-primary">O firmie</span>
-                        <h2 class="w-[250px] h-[110px] text-[48px] mt-[16px] text-primary leading-[1.15]">
+                        <h2 class="w-[250px] h-[110px] lg:text-[48px] text-[42px] mt-[16px] text-primary leading-[1.15]">
                             Tworzymy<br/>
                             z <span class="italic">pasją</span>
                         </h2>
-                        <p class="w-[489px] text-[16px] text-primary mt-[44px]">
+                        <p class="lg:w-[489px] md:w-[370px] lg:text-[16px] md:text-[13px] text-[12px] text-primary lg:mt-[44px] mt-[20px]">
                             Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
                         </p>
-                        <div class="w-[493px] mt-[72px] flex justify-between">
+                        <div class="lg:w-[493px] w-[230px] lg:mt-[72px] mt-[32px] flex justify-between">
                             <button class="relative contact__button text-primary border-[1px] border-primary hover:text-secondary w-[208px] h-[50px] bg-secondary rounded-[30px]">
                                 <span class="relative z-10 flex justify-center">
                                     Poznaj nas bliżej <img class="brightness-[100] ml-2" src="../src/assets/icons/smallArrowRight.svg" />
@@ -144,26 +145,26 @@
                 </div>
             </section>
             <section id="implementation" class="bg-beige pt-[120px]">
-                <div class="ml-[200px] pb-[96px]">
+                <div class="md:ml-[200px] ml-5 pb-[96px]">
                     <span class="text-secondary text-[12px]">Realizacje</span>
                     <h2 class="text-[48px] mt-[16px]">Nasze <span class="italic">projekty</span></h2>
                 </div>
-                <div class="gallery__container relative">
-                    <div class="macy-grid transition-all macy-grid-overflow-hidden relative" id="macy">
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto0.png" alt="Stairs"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto1.png" alt="Pool"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto3.png" alt="Arch"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto4.png" alt="Porch"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto5.png" alt="Fish"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto6.png" alt="Path"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto7.png" alt="Roof"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto8.png" alt="Porch with a pool"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto9.png" alt="Wooden roof"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto10.jpg" alt="DoggyDog!"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto11.jpg" alt="Tent"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto12.jpg" alt="Porch luxury look"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto13.jpg" alt="Table and chairs"></div>
-                        <div class="grid-item"><img src="../src/assets/photos/projectPhoto14.jpg" alt="Swing"></div>      
+                <div class="gallery__container relative ">
+                    <div class="macy-grid transition-all macy-grid-overflow-hidden relative " id="macy">
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto0.png" alt="Stairs"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto1.png" alt="Pool"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto3.png" alt="Arch"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto5.png" alt="Fish"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto4.png" alt="Porch"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto6.png" alt="Path"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto7.png" alt="Roof"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto8.png" alt="Porch with a pool"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto9.png" alt="Wooden roof"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto10.jpg" alt="DoggyDog!"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto11.jpg" alt="Tent"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto12.jpg" alt="Porch luxury look"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto13.jpg" alt="Table and chairs"></div>
+                        <div class="grid-item"><img class="md:mx-0 mx-auto" src="../src/assets/photos/projectPhoto14.jpg" alt="Swing"></div>      
                     </div>
                     <div class="gallery__singleImage">
                         <div class="flex flex-col cursor-pointer">
@@ -185,14 +186,14 @@
             </section>
             <section id="contact" class="w-full h-[478px] py-[60px] bg-primary">
                 <div class="flex justify-center items-center">
-                    <div class="w-[70vw] h-[358px] bg-secondary flex items-center justify-center">
-                        <h3 class="w-[599px] tracking-[-0.02em] leading-[1.2em] text-[40px] text-primary mt-[11px]">
+                    <div class="sm:w-[70vw] w-full h-[358px] bg-secondary flex sm:flex-row flex-col items-center justify-center">
+                        <h3 class="lg:w-[599px] md:w-[340px] w-[270px] tracking-[-0.02em] leading-[1.2em] lg:text-[40px] sm:text-[36px] text-[30px] text-primary mt-[11px]">
                             Zostańmy w kontakcie! <br />
                             Znajdziesz nas na <span class="italic tracking-[-0.01em]">Instagramie.</span>
                         </h3>
-                        <div class="w-[157px] h-[117px] ml-[64px] flex flex-col">
-                            <p class="text-[16px] tracking-[-0.01em] text-primary mb-[24px]">Śledź nasze najnowsze realizacje!</p>
-                            <button class="relative instagram__button  text-secondary hover:text-white w-[123px] h-[50px] bg-white border-[1px] border-white rounded-[30px]">
+                        <div class="sm:w-[157px] w-[270px] h-[117px] md:ml-[64px] flex flex-col">
+                            <p class="text-[16px] tracking-[-0.01em] text-primary mb-[24px] sm:mt-0 mt-4">Śledź nasze najnowsze realizacje!</p>
+                            <button class="relative instagram__button  text-secondary hover:text-white md:w-[123px] sm:w-[150px] w-[250px] h-[50px] bg-white border-[1px] border-white rounded-[30px]">
                                 <span class="relative z-10 flex justify-center text-[16px]"><a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank">Instagram</a></span>
                             </button>
                         </div>
@@ -202,28 +203,28 @@
         </main>
         <footer class="w-full h-[499px] pb-[120px] pt-[80px] bg-[#111111]">
             <div class=" flex flex-col justify-center items-center">
-                <div class="w-[70vw] h-[195px] flex flex-col justify-between">
+                <div class="md:w-[70vw] w-[90vw] h-[195px] flex flex-col justify-between">
                     <div class="flex justify-between items-center">
                         <img class="w-[115px] h-[19px]" src="../src/assets/logoFooter.png" alt="GiardDesign logo" />
                         <div>
-                            <span class="tracking-[-0.01em] text-primary">Daj znać, co możemy dla Ciebie zrobić!</span>
-                            <button class="relative footer__button text-white w-[208px] h-[50px] bg-secondary border-[1px] border-secondary rounded-[30px] ml-[24px]">
-                                <span class="relative z-10 flex justify-center text-[16px]"><a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank">Skontaktuj się z nami</a></span>
+                            <span class="tracking-[-0.01em] text-primary md:text-[16px] text-[13px]">Daj znać, co możemy dla Ciebie zrobić!</span>
+                            <button class="relative footer__button text-white md:w-[208px] w-[158px] h-[50px] bg-secondary border-[1px] border-secondary rounded-[30px] ml-[24px]">
+                                <span class="relative z-10 flex justify-center md:text-[16px] text-[13px]"><a href="https://youtu.be/dQw4w9WgXcQ?t=43" target="_blank">Skontaktuj się z nami</a></span>
                             </button>
                         </div>
                     </div>
                     <div class="w-full h-[1px] bg-primary"></div>
                     <div>
-                        <div class="flex justify-between">
-                            <ul class="w-[379px] text-[14px] text-primary flex justify-between">
+                        <div class="flex justify-between items-center">
+                            <ul class="md:w-[379px] w-[320px] md:text-[14px] text-[13px] text-primary flex justify-between">
                                 <li>Kontakt</li>
                                 <li>Instagram</li>
                                 <li>Facebook</li>
                                 <li>LinkedIn</li>
                             </ul>
-                            <div>
-                                <span class="text-primary">000-000-000</span>
-                                <span class="text-primary">giarddesign@kontakt.pl</span>
+                            <div class="md:w-auto w-[260px]">
+                                <span class="text-primary md:text-[16px] text-[14px] md:mr-0 mr-2">000-000-000</span>
+                                <span class="text-primary md:text-[16px] text-[14px]">giarddesign@kontakt.pl</span>
                             </div>
                         </div>
                     </div>
