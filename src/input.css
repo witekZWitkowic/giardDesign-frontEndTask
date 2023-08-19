@@ -453,6 +453,12 @@ p, span, li{
     }
     
 }
+@media (max-width: 768px) {
+ .offer_hoverAnimation-box:hover::after, .offer_hoverAnimation-box:hover::before{
+    width: 500px;
+    height: 500px; 
+ }
+}
 @media (max-width: 425px) {
   .navBar__offer-dropdown-closed, .navBar__offer-dropdown-open {
     height: 285px;

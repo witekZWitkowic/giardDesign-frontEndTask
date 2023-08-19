@@ -42,8 +42,8 @@
         <main>
             <section id="hero" class="lg:h-[737px] h-[494px] relative"  data-slider>
                 <div class="w-full" data-slides>
-                    <div class="hero__slider-slide flex flex-row" data-active>
-                        <div class=" md:w-[55vw] w-full lg:h-[737px] h-[494px] bg-beige flex ">
+                    <div class="hero__slider-slide sm:flex flex-row" data-active>
+                        <div class=" md:w-[55vw] w-full lg:h-[737px] sm:h-[494px] h-[560px] bg-beige flex ">
                             <div class="lg:w-[599px] md:w-[522px] ss:w-[390px] w-[360px] lg:ml-[89px] md:ml-[68px] ss:ml-[32px] ml-3 lg:mt-[144px] md:mt-[84px] mt-[64px]">
                                 <h1 class="lg:text-[60px] text-[42px] leading-[1.17]">
                                     Nowoczesna aranżacja <br/>Twojego ogrodu
@@ -61,8 +61,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="md:w-[45vw] w-full lg:h-[737px] h-[494px] relative">
-                            <div data-slides>
+                        <div class="md:w-[45vw] w-full lg:h-[737px] sm:h-[494px] relative">
+                            <div class="sm:block hidden ">
                                 <img class="hero__slider-img lg:h-[737px] h-[494px]" src="../src/assets/photos/hero1.png" />
                             </div>
                             <div class="lg:w-[192px] w-[124px] lg:h-[96px] h-[72px] bg-primary absolute bottom-0 right-0 flex justify-evenly items-center">
@@ -71,8 +71,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__slider-slide flex flex-row" >
-                        <div class="md:w-[55vw] w-full lg:h-[737px] h-[494px] bg-beige flex ">
+                    <div class="hero__slider-slide sm:flex flex-row" >
+                        <div class="md:w-[55vw] w-full lg:h-[737px] sm:h-[494px] h-[560px] bg-beige flex ">
                             <div class="lg:w-[599px] md:w-[522px] ss:w-[390px] w-[360px] lg:ml-[89px] md:ml-[68px] ss:ml-[32px] ml-3 lg:mt-[144px] md:mt-[84px] mt-[64px]">
                                 <h1 class="lg:text-[60px] text-[42px] leading-[1.17]">
                                     Wybitna aranżacja <br/>Twojego ogrodu
@@ -80,7 +80,7 @@
                                 <p class="lg:w-[489px] md:w-[420px] ss:w-[380px] w-[355px] lg:text-[16px] text-[14px] mt-[44px]">
                                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
                                 </p>
-                                <div class="lg:w-[493px] md:w-[420px] ss:w-[370px] w-[355px] md:mt-[72px] mt-[52px] mr-0 flex justify-between">
+                                <div class="lg:w-[493px] md:w-[420px] ss:w-[370px] w-[355px] md:mt-[62px] mt-[52px] mr-0 flex justify-between">
                                     <a href="#contact"><button class="relative hero__button-contact text-white md:text-[14px] text-[13px] hover:text-secondary lg:w-[208px] md:w-[205px] ss:w-[180px] w-[175px] h-[50px] bg-secondary rounded-[30px]">
                                         <span class="relative z-10">Skontaktuj się z nami</span>
                                     </button></a>
@@ -90,11 +90,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="md:w-[45vw] w-full lg:h-[737px] h-[494px] relative">
-                            <div>
+                        <div class="md:w-[45vw] w-full lg:h-[737px] sm:h-[494px] relative">
+                            <div class="sm:block hidden">
                                 <img class="hero__slider-img lg:h-[737px] h-[494px]" src="../src/assets/photos/hero2.jpg"/>
                             </div>
-                            <div class="lg:w-[192px] w-[124px] lg:h-[96px] h-[72px] bg-primary absolute bottom-0 right-0 flex justify-evenly items-center">
+                            <div class="z-10 lg:w-[192px] w-[124px] lg:h-[96px] h-[72px] bg-primary absolute bottom-0 right-0 flex justify-evenly items-center">
                                 <button class="hero__slider-button last" data-slider-button="last"><img src="../src/assets/icons/arrowLeft.svg"/></button>
                                 <button class="hero__slider-button next" data-slider-button="next"><img src="../src/assets/icons/arrowRight.svg"/></button>
                             </div>
@@ -102,7 +102,7 @@
                     </div>
                 </div>    
             </section>
-            <section id="offer" class="w-full lg:h-[939px] h-auto lg:px-[89px] px-[25px] lg:pb-0 pb-16 bg-primary">
+            <section id="offer" class="w-full lg:h-[939px] h-auto lg:px-[89px] sm:px-[35px] px-5 lg:pb-0 pb-16 bg-primary">
                 <div class="flex flex-col items-center">
                     <div class="md:w-[70vw] w-full md:mt-[120px] mt-[100px]">
                         <span class="text-secondary text-[12px]">Oferta</span>
@@ -117,8 +117,8 @@
                     </div>
                 </div>
                 <div class="flex md:flex-row flex-col justify-between items-center md:h-auto h-[1000px] lg:mt-[96px] md:mt-[78px] mt-[48px] lg:mb-[160px] mb-[50px]">
-                    <div class="lg:w-[378px] w-[300px] lg:h-[370px] h-[295px] bg-white flex flex-col justify-center offer_hoverAnimation-box hover:scale-[1.01]">
-                        <div class="px-[40px] lg:py-[48px] py-[38px] lg:w-[373px] w-[295px] lg:h-[365px] h-[290px] z-10 absolute bg-white rounded-[28px]">
+                    <div class="lg:w-[378px] md:w-[300px] sm:w-[400px] w-[300px] lg:h-[370px] h-[295px] bg-white flex flex-col justify-center offer_hoverAnimation-box hover:scale-[1.01]">
+                        <div class="px-[40px] lg:py-[48px] py-[38px] lg:w-[373px] md:w-[295px] sm:w-[395px] w-[295px] lg:h-[365px] h-[290px] z-10 absolute bg-white rounded-[28px]">
                             <img class="lg:w-auto w-[32px]" src="../src/assets/icons/projectsIcon.svg"/>
                             <h3 class="lg:text-[28px] text-[24px] tracking-tighter leading-[1.15rem] mt-[32px] mb-[12px]">Projekty</h3>
                             <p class="lg:text-[14px] text-[12px]">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
@@ -127,8 +127,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="lg:w-[378px] w-[300px] lg:h-[370px] h-[295px] bg-white flex flex-col justify-center offer_hoverAnimation-box hover:scale-[1.01]">
-                        <div class="px-[40px] lg:py-[48px] py-[38px] lg:w-[373px] w-[295px] lg:h-[365px] h-[290px] z-10 absolute bg-white rounded-[28px]">
+                    <div class="lg:w-[378px] md:w-[300px] sm:w-[400px] w-[300px] lg:h-[370px] h-[295px] bg-white flex flex-col justify-center offer_hoverAnimation-box hover:scale-[1.01]">
+                        <div class="px-[40px] lg:py-[48px] py-[38px] lg:w-[373px] md:w-[295px] sm:w-[395px] w-[295px] lg:h-[365px] h-[290px] z-10 absolute bg-white rounded-[28px]">
                             <img class="lg:w-auto w-[32px]" src="../src/assets/icons/visualisationIcon.svg"/>
                             <h3 class="lg:text-[28px] text-[24px] tracking-tighter leading-[1.15rem] mt-[32px] mb-[12px]">Wizualizacje</h3>
                             <p class="lg:text-[14px] text-[12px]">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
@@ -137,8 +137,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="lg:w-[378px] w-[300px] lg:h-[370px] h-[295px] bg-white flex flex-col justify-center offer_hoverAnimation-box hover:scale-[1.01]">
-                        <div class="px-[40px] lg:py-[48px] py-[38px] lg:w-[373px] w-[295px] lg:h-[365px] h-[290px] z-10 absolute bg-white rounded-[28px]">
+                    <div class="lg:w-[378px] md:w-[300px] sm:w-[400px] w-[300px] lg:h-[370px] h-[295px] bg-white flex flex-col justify-center offer_hoverAnimation-box hover:scale-[1.01]">
+                        <div class="px-[40px] lg:py-[48px] py-[38px] lg:w-[373px] md:w-[295px] sm:w-[395px] w-[295px] lg:h-[365px] h-[290px] z-10 absolute bg-white rounded-[28px]">
                             <img class="lg:w-auto w-[32px]" src="../src/assets/icons/implementationIcon.svg"/>
                             <h3 class="lg:text-[28px] text-[24px] tracking-tighter leading-[1.15rem] mt-[32px] mb-[12px]">Realizacje</h3>
                             <p class="lg:text-[14px] text-[12px]">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
@@ -176,7 +176,7 @@
                 </div>
             </section>
             <section id="implementation" class="bg-beige pt-[120px]">
-                <div class="md:ml-[200px] ml-5 pb-[96px]">
+                <div class="md:ml-[200px] sm:ml-[35px] ml-5 pb-[96px]">
                     <span class="text-secondary text-[12px]">Realizacje</span>
                     <h2 class="text-[48px] mt-[16px]">Nasze <span class="italic">projekty</span></h2>
                 </div>
