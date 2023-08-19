@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
 p {
     line-height: 24px;
 }
-p, span{
+p, span, li{
     @apply font-inter;
 }
 
@@ -126,66 +126,7 @@ p, span{
     left: 0;
 }
 
-@media (max-width: 1023px) {
-    
-    .navBar__li-animation::after{
-        display: none;
-    }
-    .navBar__list {
-        width: 100%;
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-35%, -35%);
-        text-align: center;
-    }
-    .navBar__list li {
-        color: white;
-        font-size: 56px;
-        margin: 15px 0 0 0;
-    }
-    .navBar__list-position.active{
-        opacity: 1;
-        width: 100%;
-        visibility: visible;
-    }
-    .navBar__list-position {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        opacity: 0;
-        width: 0;
-        visibility: hidden;
-        z-index: 20;
-        transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-    .navBar__background {
-        position: fixed;
-        transform: scale(0);
-        top: 16px;
-        right: 22px;
-        width: 37px;
-        height: 37px;
-        border-radius: 50%;
-        background: var(--secondary);
-        background-size: cover;
-        background-position: center;
-        z-index: 10;
-        transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
-    }
-    .navBar__background.active{
-        transform: scale(31.5);
-    }
-}
-@media (max-width: 425px) {
-    .navBar__list {
-        transform: translate(-50%, -35%);
-    }
-    .navBar__list li{
-        font-size: 46px;
-    }
-}
+
 
 /* ______  HERO SECTION ______ */
 .hero__button-portfolio::before, .hero__button-contact::before{
@@ -334,6 +275,13 @@ p, span{
   .moreImages__backgroud {
     background: linear-gradient(0deg, rgba(220,193,171,1) 0%, rgba(255,255,255,0) 100%);
   }
+  .macy-grid-overflow-hidden{
+    overflow: hidden;
+    max-height: 1475px;
+  }
+  .macy-grid {
+    transition: all 1s;
+  }
 
   /* ______ POPUP IMAGE ______ */
   
@@ -387,3 +335,79 @@ p, span{
     transform: rotate(-180deg);
     transition: 0.3 all ease-in-out;
   }
+
+  /* ______ MEDIA ______ */
+
+  @media (max-width: 1024px){
+    .offer_hoverAnimation-box {
+      width: 300px;
+      height: 295px;
+   }
+  
+   .offer_hoverAnimation-box:hover::after, .offer_hoverAnimation-box:hover::before{
+      width: 400px;
+      height: 400px; 
+   }
+
+  }
+  @media (max-width: 1023px) {
+    
+    .navBar__li-animation::after{
+        display: none;
+    }
+    .navBar__list {
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-35%, -35%);
+        text-align: center;
+    }
+    .navBar__list li {
+        color: white;
+        font-size: 56px;
+        margin: 15px 0 0 0;
+    }
+    .navBar__list-position.active{
+        opacity: 1;
+        width: 100%;
+        visibility: visible;
+    }
+    .navBar__list-position {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        opacity: 0;
+        width: 0;
+        visibility: hidden;
+        z-index: 20;
+        transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navBar__background {
+        position: fixed;
+        transform: scale(0);
+        top: 16px;
+        right: 22px;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        background: var(--secondary);
+        background-size: cover;
+        background-position: center;
+        z-index: 10;
+        transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    .navBar__background.active{
+        transform: scale(31.5);
+    }
+    
+}
+@media (max-width: 425px) {
+    .navBar__list {
+        transform: translate(-50%, -35%);
+    }
+    .navBar__list li{
+        font-size: 46px;
+    }
+}

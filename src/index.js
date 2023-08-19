@@ -68,7 +68,7 @@ sliderButtons.forEach(button => {
 window.onload = () => {
     const macy = Macy({
         container: '#macy',
-        trueOrder: false,
+        trueOrder: true,
         waitForImages: true,
         margin: 43,
         columns: 4,
@@ -80,15 +80,8 @@ window.onload = () => {
     });
 }
 
-//Display only first 9 pictures
-
-for(let i = 9; i < images.length; i++) {
-    images[i].style.display = 'none'
-}
 const moreImagesHandler = () => {
-    for(let image of images){
-        image.style.display = 'block';
-    }
+    document.querySelector('.macy-grid-overflow-hidden').style.maxHeight = "4000px";
     moreImagesButton.style.display = 'none';
     blurredBackground.style.display = 'none';
 }
