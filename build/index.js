@@ -30,14 +30,15 @@ const toggleMenu = () => {
     navBar_list.classList.toggle("active");
     navBar_background.classList.toggle("active");
     hamburger.classList.toggle("active");
-    
-    navBar_list.classList.contains("active")
+}
+const toggleOverflow = () => {
+    hamburger.classList.contains("active")
     ? document.body.style.overflow = "hidden"
     : document.body.style.overflow = "auto"
 }
 
-
 menu_button.addEventListener("click", toggleMenu);
+menu_button.addEventListener("click", toggleOverflow);
 
 navbar_li.forEach((li) => {
     li.classList.contains("navBar__dropdown")
